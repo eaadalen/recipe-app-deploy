@@ -46,7 +46,6 @@ def get_chart(chart_type, data, **kwargs):
 
    elif chart_type == '#2':
        #generate pie chart based on the price.
-       #The book titles are sent from the view as labels
        labels=kwargs.get('labels')
        plt.pie(data['cooking_time'], labels=labels)
 
