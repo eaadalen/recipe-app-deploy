@@ -58,41 +58,33 @@
                 <div class="col-xs-12 text-center menu-1 menu-wrap">
                     <ul>
                         <li><a href="../">Home</a></li>
-                        <li><a href="../list">Recipe List</a></li>
-						<li class="active"><a href ="{%url 'login' %}">Login</a></li>
+                        <li><a href="list">Recipe List</a></li>
+						<li class="active"><a href="about_me">About Me</a></li>
+						<li><a href="records">Search Recipes</a></li>
+						<li><a href ="{%url 'login' %}">Login</a></li>
                     </ul>
                 </div>
             </div>
         </div>
 	</nav>
 
-   <br><br>
-
-   <div id="fh5co-featured-menu" class="fh5co-section">
+	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
-               <h1 style="color: white">Login</h1>
-
-               {% if error_message %}
-                  {{error_message}}
-               {% endif %}
-
-               <form action="" method="POST" >
-                  {% comment %} add Django security token {% endcomment %}
-                  {% csrf_token %}   
-
-                  {% comment %} print form received from view  {% endcomment %}
-                  {{form}}           
-
-                  {% comment %} add button {% endcomment %}
-                  <br>
-                  <button type="submit" style="color: black">Submit</button>
-               </form>
-            </div>
+				<div class="col-md-12 text-center">
+					<div class="display-t js-fullheight">
+						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn">
+							<h1>Erik Aadalen</h1>
+							<li><a href="https://github.com/eaadalen">Github</a></li>
+                            <li><a href="https://www.linkedin.com/in/erik-aadalen-415909168/">LinkedIn</a></li>
+                            <li><a href="https://eaadalen.github.io/Final-Portfolio-Test/welcome">Portfolio</a></li>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
-	</div>
+	</header>
 
 	<footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
 		<div class="container">
@@ -173,3 +165,4 @@
 
 	</body>
 </html>
+

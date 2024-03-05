@@ -49,6 +49,10 @@ def records(request):
    return render(request, '../templates/recipes/records.html', context)
 
 # Create your views here.
+def about_me(request):
+   return render(request, '../templates/recipes/about_me.html')
+
+# Create your views here.
 class RecipeListView(LoginRequiredMixin, ListView):           #class-based view
    model = Recipe                         #specify model
    template_name = '../templates/recipes/recipe_list.html'    #specify template 
