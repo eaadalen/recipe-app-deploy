@@ -1,7 +1,3 @@
-<!--
-   <!DOCTYPE html>
--->
-
 {% load static %}
 
 <!DOCTYPE HTML>
@@ -72,32 +68,30 @@
         </div>
 	</nav>
 
-	<header id="fh5co-header" class="fh5co-cover js-fullheight" role="banner" data-stellar-background-ratio="0.5">
+   <br><br><br>
+
+	<div id="fh5co-featured-menu" class="fh5co-section">
 		<div class="container">
 			<div class="row">
-				<div class="col-md-12 text-center">
-					<div class="display-t js-fullheight">
-						<div class="display-tc js-fullheight animate-box" data-animate-effect="fadeIn" >
-							<h1> Search for recipe records </h1>
-                     <hr>
-                     <form action="" method="POST">
-                        {% csrf_token %}
-                        {{form}}
-                        <button type="submit" style="color: black;">Search</button>
-                     </form> 
-                     {% if recipes_df %}
-                        {{recipes_df|safe}} 
-                        <br>
-                        <img src="data:image/png;base64, {{chart|safe}}">
-                     {% else %}
-                        <h3>No data</h3>
-                     {% endif %}
-						</div>
-					</div>
-				</div>
+				<div class="col-md-3 col-sm-6 col-xs-6 col-xxs-12 fh5co-item-wrap animate-box">
+               <h1 style="color: white;">Search for recipe records</h1>
+               <hr>
+               <form action="" method="POST" style="color: rgb(100, 100, 100)">
+                  {% csrf_token %}
+                  {{form}}
+                  <button type="submit">Search</button>
+               </form> 
+               {% if recipes_df %}
+                  {{recipes_df|safe}} 
+                  <br>
+                  <img src="data:image/png;base64, {{chart|safe}}">
+               {% else %}
+                  <h3>No data</h3>
+               {% endif %}
+            </div>
 			</div>
 		</div>
-	</header>
+	</div>
 
 	<footer id="fh5co-footer" role="contentinfo" class="fh5co-section">
 		<div class="container">
@@ -178,4 +172,3 @@
 
 	</body>
 </html>
-
